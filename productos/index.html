@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pet Paradise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .pointer{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex flex-col min-h-screen">
+        <header
+            class="sticky flex items-center justify-between whitespace-nowrap border-b border-background-light-dark/10 dark:border-background-dark-light/10 px-10 py-4">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3 text-slate-900 dark:text-white">
+                    <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+                            fill="currentColor"></path>
+                        <path clip-rule="evenodd"
+                            d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                    <h2 class="text-xl font-bold">Pet Paradise</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8" id="navMenu">
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="/template-ecommerce-petshop/">Inicio</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="/template-ecommerce-petshop/productos/">Productos</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="/template-ecommerce-petshop/servicios/">Servicios</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="/template-ecommerce-petshop/contacto/">Contacto</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/template-ecommerce-petshop/carrito/"
+                    class="flex items-center justify-center rounded-full size-10 bg-primary/10 dark:bg-primary/20 text-slate-600 dark:text-slate-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+                <a href="/template-ecommerce-petshop/perfil/" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHzYqeT0bWXoXqaStv2LZSlVN2EOtQt5lJFM-YjpJAa5qsfcsGj4P2E1BztyiU4u8QWbIOYllmeajTx_7ni_-B2PNcBbzXTmn-wdMPKto_bY6ID-Jze42U80CWQgeCHjML5qF4UJe3kwLXYcBEDB8MS4eMXVlEL8-yqlR0KV9TCv-WoSqiP7Xhr1iTIggjIgEn2s8j5uCEMSzDjA2_i8X4T4ikqOioxDwSCdJ64LFjLjjV6aLjsg0nCOepR3Krgueqjht4dit-Z1qs");'>
+                </a>
+            </div>
+            <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    </path>
+                </svg>
+            </button>
+        </header>
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="w-full lg:w-1/4">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Filtros</h3>
+                            <div class="sm:hidden mb-4">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+                                <input
+                                    class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500"
+                                    placeholder="Buscar productos..." type="text" />
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <label
+                                        class="text-sm font-medium text-gray-700 dark:text-gray-300">Categoría</label>
+                                    <span
+                                        class="material-symbols-outlined text-gray-500 dark:text-gray-400">expand_more</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Precio</label>
+                                    <span
+                                        class="material-symbols-outlined text-gray-500 dark:text-gray-400">expand_more</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Marca</label>
+                                    <span
+                                        class="material-symbols-outlined text-gray-500 dark:text-gray-400">expand_more</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Ordenar por</h3>
+                            <select
+                                class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg py-2 px-3 text-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-100">
+                                <option>Relevancia</option>
+                                <option>Precio: más bajo a más alto</option>
+                                <option>Precio: más alto a más bajo</option>
+                            </select>
+                        </div>
+                    </div>
+                </aside>
+                <div class="w-full lg:w-3/4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBujRHyZ4AdZLh94xmLCciiMy517nBeM2v5sigybfzNTAjoGSUnq1K9JvlZsw37ALluVqZnKll7YRWs8qAopxWzp1Uf_v9oUb08YED4b4hb9gDV82jOk5Jfu4cjvVofPHrCu6z4Hk2p3CTz6T3-bhgtMFAErqlt9dLBIlTWWHY3KSOSVC3WKSP6nqzvo_Bu7puvFL39aisZra2_xILNtsyYi4qTi0clTiXUE6SHy1QDkhqZR6m2jW0w0QSOb6-4zvj3v6P1merfowxH');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Comida para
+                                    perros</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$25.99</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuMvwff8JWCK0UtAruxpD4hdWc6sOHLg1GtHaQmtxt_zIH4V0dV-Z4lLA8GK_rXT-tcgxjZjYag9aTGbr_u4_2iFsW8cI9z-zYeKkKSKki2N1ls_5kglslu543_dTUN_02qwT3_o0dm-QVqeF3-tzPnX1eBzQbI5Hiy4UvJGBFkaXwHd6mu0QfeFWMYLObgfblDKj8oAcOYKJKQICAcgEah5-aElDuPBfyal0Mpv_TrZLQSQJ7Mvz6DBoOgQHqJG2UQqc5FTvk9laB');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Juguetes para
+                                    gatos</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$12.50</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHuaAmYCyajT71aJgWRBqPdPdokjAd69alRNScJJDCM7aL8IIygS5ntTNVz9hMP-FyBTbWtfuUakw_PHc2C39Ze6SK68qKThIO2UVA5-n6TEPI9W6iaRepB67CDtM4JSQnfM4Jmh77Vdzl7i8doqswhLGSAeWEWru6P2PUhuSfbJtA6hs_D334ZUS1-L2u2E2Nus80uBiyE3jXA_djMPDLJ7_wPGuXhvZGGL4A-c5sbFzqtVO3jvlTmfUbLbIG0yUtrGq1GjWT-GL9');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Accesorios para
+                                    pájaros</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$18.00</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSbG0D209ehivzAD-07_on8aXHDHSRgoJGB3YD2XWdAFnu2YNj-sWZSfL_5fo95uTQCbnTnJfFGIDZJlC9QXRAsBmdfc3ahZWLaRUt_EucAZQkwXhCwRQ0SDCEywJCpOndxld7lZ2qfa1J65qinwUfscbRByIF-A-gT9k_Qt0bq5ImmwDWdJdINSZ5CcVkKOzE3A5h7YXZ6vM-Y820fkH8KA46yISnGzjDkoeBzBZf1Ex94HrcOS5PrIkClajTaARWgFUhgOvwiyk5');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Camas para
+                                    mascotas</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$35.00</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCQDrcJLpV0v1kN9KDVPb6H589FnJR9xSVsM3SgdqgIEu8qV8EFQTfU_HSxf8oNkrnL0j8-ivQifdPni5hA36IiQ5RnIgbvUqSyNwJdH0ZscoDuadsvQWMXU1WGDlech3oVAvfh-bxRbr011ndZpMeQY47J81_EeUUfuSL9mkVXeAHJZrNbnPDphOzRfTcEip0okhDloYjQRYciozXKUixWGdNlxn6049wapwCYPPPnoVkdv8OjVRTW4dmaXG3ILAS4C6D3A9txqLQ');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Productos de
+                                    higiene</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$15.75</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvZJOQirVLVKX7Rv6Fsa8A6Xi_X49XQNMT9aEB5P4hpvvFvWWXZJ06bVWgegW1UX5jIWFjCuYeyTv8uh3unGFMDdrjN09l6lKdAs3EnSuCxyG-BpewgNrx6UbMkIzf_3ikZJU5TDYeOOMnUuBRKvoMcy4mtlSLEnL_9IyRAMl-q00csW0OezPzFGHDjwDkOycWGnnQ45HCEZOSd-WJdTNvRFiqlLRDVP1I5VDwkR2UWj9p18QwSGXGHOunRLiGuGldlVYdh46gQXU9');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Snacks para
+                                    roedores</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$8.99</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZ7uFBYElrwjNqzP2Oj7vmOnN5GKtwJV7hu7t0Myc2rvfRqCP2axZRBsqjfSuCbVnVnpPb-iaJ7Y0P0QfY9ToeXFOuN-ebBvCke-6JAPiB5ZiIzha2V6OQ4R48jUEmB9unMbxpq1F_NoiHMud03ND6oT7-KmQCtOX5mioC13JfBwZUltXPHSmOvJzbfPAg_1EopsGoMZPogEbuMZHU6bHBkYcr0-et2vRMXE_op0rpWmIbnxwA7gXqGOfyCKzwf-pyYNfrg1vKhlHO');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Transportines
+                                </h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$45.50</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9CbRM6lzoIp-ry49Ss70f_2-8-UwwONAwneR4pltY9n8uG6QbCgznSbk4HujwsNF19e9ZdhWajFC1iNrpSqzWoTdy4OJGz5D056JsJezYw2iZZgvaf6rze0tT0ABw-WYRj7cCrSzidtaOzNi_lNaQpIHPwxGHfxC-4vpDCO39fg5LHSlI0WXJgRSnJMrWUUHn37h2UVAHEIF8dsktNv56SR526r56dZfHLu8MQyO8lzBJhHH1-g50JMzDHG3TIseXH5Hp_vkXn2uM');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Ropa para
+                                    mascotas</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$22.00</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div name="item" class="pointer aspect-square bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBh2KYmGIHGxA9e0HSpxdnuQg_VDqDzhuG5viDyRsOFOWtAgPabzUDDNPK3fTsqUbw5h368I5RqRASUAGeMHiwnO2by_DEG3aBbPoYweQzx5Tm6cx7lyTVakTYn6BU4RwqCC7UxGV8Ro-IFfWtG2-QbJ_KSQyXci5nUk1J9OgdOmuaej6LbYjB80pJFsK1Cv8XuaPridUAEDQahISsyWLxS0GvLatT1g0r5TIeMzlEt45QmAonuoMrYboHZYcZstHX9HlRuu5Wu0OwQ');">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-base font-semibold text-gray-800 dark:text-white mb-1">Comida para peces
+                                </h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">$11.25</p>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Añadir
+                                    al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../main.js"></script>
+    <script>
+        document.getElementsByName('item').forEach((v, i) => {
+            v.addEventListener('click', () => {
+                window.location.href = '/detalle-producto/'
+            })
+        })
+    </script>
+</body>
+
+</html>
