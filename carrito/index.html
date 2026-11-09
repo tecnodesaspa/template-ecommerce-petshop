@@ -47,6 +47,28 @@
                 'opsz' 24
         }
     </style>
+<style>
+/* Responsive layout: preserve content and keep controls within the viewport. */
+:where(main, section, article, aside, header, footer, nav, form, fieldset, .flex > *, .grid > *) { min-width: 0; }
+img, video, iframe { max-width: 100%; }
+:where(input, select, textarea) { max-width: 100%; }
+:where(p, h1, h2, h3, a, label) { overflow-wrap: break-word; }
+@media (max-width: 767px) {
+  .px-40, .px-20, .px-16, .px-12, .px-10 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="min-w-["] { min-width: 0 !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  .toast-notification { max-width: calc(100vw - 2rem); right: 1rem; }
+}
+
+/* Tablet navigation, footer wrapping, and decorative accents. */
+.material-symbols-outlined { flex-shrink: 0; overflow-wrap: normal; white-space: nowrap; }
+footer li, footer a { overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+  footer .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .absolute.-right-6 { right: 0; }
+}
+</style>
+<meta name="currency" content="CLP">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
@@ -117,7 +139,7 @@
                                 <h3 class="font-bold text-lg">Alimento Premium para Perros</h3>
                                 <p class="text-sm text-subtle-light dark:text-subtle-dark">Alimento seco para perros,
                                     10kg</p>
-                                <p class="font-bold mt-1">$27.50</p>
+                                <p class="font-bold mt-1">$27.500</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <button
@@ -142,7 +164,7 @@
                                 <h3 class="font-bold text-lg">Juguete de Pelota para Gatos</h3>
                                 <p class="text-sm text-subtle-light dark:text-subtle-dark">Juguete interactivo para
                                     gatos</p>
-                                <p class="font-bold mt-1">$5.50</p>
+                                <p class="font-bold mt-1">$5.500</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <button
@@ -165,17 +187,17 @@
                                 <div class="flex justify-between text-subtle-light dark:text-subtle-dark">
                                     <span>Subtotal</span>
                                     <span
-                                        class="text-foreground-light dark:text-foreground-dark font-medium">$55.00</span>
+                                        class="text-foreground-light dark:text-foreground-dark font-medium">$55.000</span>
                                 </div>
                                 <div class="flex justify-between text-subtle-light dark:text-subtle-dark">
                                     <span>Impuestos (10%)</span>
                                     <span
-                                        class="text-foreground-light dark:text-foreground-dark font-medium">$5.50</span>
+                                        class="text-foreground-light dark:text-foreground-dark font-medium">$5.500</span>
                                 </div>
                                 <div class="border-t border-subtle-light/20 dark:border-subtle-dark/20 my-3"></div>
                                 <div class="flex justify-between font-bold text-lg">
                                     <span>Total</span>
-                                    <span>$60.50</span>
+                                    <span>$60.500</span>
                                 </div>
                             </div>
                             <button id="btnPay"
